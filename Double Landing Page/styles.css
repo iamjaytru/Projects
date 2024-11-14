@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1{
+  font-size: 100px;
+  color: aliceblue;
+  backdrop-filter: brightness(.5);
+  letter-spacing: 4px;
+
+}
+
+.btn{
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  font-size: 25px;
+  border: 4px solid;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 1s background-color;
+  white-space: nowrap;
+}
+
+.btn:hover{
+  background-color: white;
+  color: black;
+}
+
+.split{
+  width: 50%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+}
+
+.split.left{
+  position: absolute;
+  left: 0;
+  background-color: #ffc0cb;
+  background-image: url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone16prohero-202409?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1725567335931");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+}
+
+.split.right{
+  position: absolute;
+  right: 0;
+  background-color: #add8e6;
+  background-image: url("https://affordablephonesng.com/wp-content/uploads/2024/04/THUMB_Galaxy-S24ultra-MAThumb-1440x960-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.active-left .left{
+  width: 75%;
+}
+.active-left .right{
+  width: 25%;
+}
+.active-right .left{
+  width: 25%;
+}
+.active-right .right{
+  width: 75%;
+}
+
+.left, .right{
+  transition: width 2s ease-in-out;
+}
